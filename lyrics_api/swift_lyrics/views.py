@@ -73,6 +73,10 @@ class SongDetail(mixins.RetrieveModelMixin,
 class APIIndex(mixins.ListModelMixin,
                mixins.CreateModelMixin,
                generics.GenericAPIView):
+    """
+    For finding lyrics
+    Ordering values can be: 'text', 'song__name', 'song__album__name'
+    """
     serializer_class = LyricDetailSerializer
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ['text', 'song__name', 'song__album__name']
