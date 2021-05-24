@@ -23,6 +23,15 @@
 `docker-compose up` from the `da-react-challenge` directory
 This is untested, but theoretically should work
 
+#### Heroku Commands
+ - git add -u
+ - git commit -m "update"
+ - git push heroku master:main
+ - git push origin master
+ - heroku run cd lyrics_api; python manage.py migrate
+ - heroku logs --tail
+
+
 ### Documentation
    - With the server running, navigate to `http://localhost:8000/swiftlyrics/swagger/` to view API documenation
    - ** please note that POST lyrics does not include `song.id` in the documentation, but you can use the ID of the song instead of the name. Same goes for Album.  
